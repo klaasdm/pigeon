@@ -127,7 +127,7 @@
 		if (resultClass==nil)
 		{
 			NSLog(@"[WARN] attempted to load: %@",className);
-			@throw [NSException exceptionWithName:@"org.testje.module" 
+			@throw [NSException exceptionWithName:@"org.pigeon.module" 
 										   reason:[NSString stringWithFormat:@"invalid method (%@) passed to %@",name,[self class]] 
 										 userInfo:nil];
 		}

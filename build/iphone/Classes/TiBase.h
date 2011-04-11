@@ -48,7 +48,7 @@
 	#define KMETHOD_DEBUG MEMORY_DEBUG
 #endif
 
-// in simulator we redefine to format for testje Developer console
+// in simulator we redefine to format for Pigeon Developer console
 
 
 #define TI_INLINE static __inline__
@@ -202,7 +202,7 @@ if ((__x<__minX) || (__x>__maxX)) \
 #define DEFINE_EXCEPTIONS \
 - (void) throwException:(NSString *) reason subreason:(NSString*)subreason location:(NSString *)location\
 {\
-	NSString * exceptionName = [@"org.testje." stringByAppendingString:NSStringFromClass([self class])];\
+	NSString * exceptionName = [@"org.pigeon." stringByAppendingString:NSStringFromClass([self class])];\
 	NSString * message = [NSString stringWithFormat:@"%@. %@ %@",reason,(subreason!=nil?subreason:@""),(location!=nil?location:@"")];\
 	NSLog(@"[ERROR] %@",message);\
 	if ([NSThread isMainThread]==NO) {\
@@ -212,7 +212,7 @@ if ((__x<__minX) || (__x>__maxX)) \
 \
 + (void) throwException:(NSString *) reason subreason:(NSString*)subreason location:(NSString *)location\
 {\
-	NSString * exceptionName = @"org.testje";\
+	NSString * exceptionName = @"org.pigeon";\
 	NSString * message = [NSString stringWithFormat:@"%@. %@ %@",reason,(subreason!=nil?subreason:@""),(location!=nil?location:@"")];\
 	NSLog(@"[ERROR] %@",message);\
 	if ([NSThread isMainThread]==NO) {\
@@ -286,28 +286,28 @@ return map;\
 
  //MUST BE NEGATIVE, as it inhabits the same space as UIBarButtonSystemItem
 enum {
-	UItestjeNativeItemNone = -1, 
-	UItestjeNativeItemSpinner = -2,
-	UItestjeNativeItemProgressBar = -3,
+	UIPigeonNativeItemNone = -1, 
+	UIPigeonNativeItemSpinner = -2,
+	UIPigeonNativeItemProgressBar = -3,
 	
-	UItestjeNativeItemSlider = -4,
-	UItestjeNativeItemSwitch = -5,
-	UItestjeNativeItemMultiButton = -6,
-	UItestjeNativeItemSegmented = -7,
+	UIPigeonNativeItemSlider = -4,
+	UIPigeonNativeItemSwitch = -5,
+	UIPigeonNativeItemMultiButton = -6,
+	UIPigeonNativeItemSegmented = -7,
 	
-	UItestjeNativeItemTextView = -8,
-	UItestjeNativeItemTextField = -9,
-	UItestjeNativeItemSearchBar = -10,
+	UIPigeonNativeItemTextView = -8,
+	UIPigeonNativeItemTextField = -9,
+	UIPigeonNativeItemSearchBar = -10,
 	
-	UItestjeNativeItemPicker = -11,
-	UItestjeNativeItemDatePicker = -12,
+	UIPigeonNativeItemPicker = -11,
+	UIPigeonNativeItemDatePicker = -12,
 	
-	UItestjeNativeItemInfoLight = -13,
-	UItestjeNativeItemInfoDark = -14,
+	UIPigeonNativeItemInfoLight = -13,
+	UIPigeonNativeItemInfoDark = -14,
 	
-	UItestjeNativeItemDisclosure = -15,
+	UIPigeonNativeItemDisclosure = -15,
 	
-	UItestjeNativeItemContactAdd = -16
+	UIPigeonNativeItemContactAdd = -16
 };
 
 

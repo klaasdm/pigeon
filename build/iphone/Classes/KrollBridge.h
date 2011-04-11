@@ -16,7 +16,7 @@
 #import "KrollObject.h"
 #import "TiModule.h"
 
-@interface testjeObject : KrollObject {
+@interface PigeonObject : KrollObject {
 @private
 	NSMutableDictionary *modules;
 	TiHost *host;
@@ -34,7 +34,7 @@
 	KrollContext *context;
 	NSDictionary *preload;
 	NSMutableDictionary *modules;
-	testjeObject *_testje;
+	PigeonObject *_pigeon;
 	BOOL shutdown;
 	NSMutableArray *proxies;
 	NSCondition *shutdownCondition;

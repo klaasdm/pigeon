@@ -206,13 +206,13 @@
         NSLog(@"[WARN] Invalid mode for audio recorder... setting to default.");
         newMode = kAudioSessionCategory_RecordAudio;
     }
-	NSLog(@"[WARN] 'testje.Media.AudioRecorder.audioSessionMode' is deprecated; use 'testje.Media.audioSessionMode'");
+	NSLog(@"[WARN] 'Pigeon.Media.AudioRecorder.audioSessionMode' is deprecated; use 'Pigeon.Media.audioSessionMode'");
 	[[TiMediaAudioSession sharedSession] setSessionMode:newMode];
 }
 
 -(NSNumber*)audioSessionMode
 {
-	NSLog(@"[WARN] 'testje.Media.AudioRecorder.audioSessionMode' is deprecated; use 'testje.Media.audioSessionMode'");	
+	NSLog(@"[WARN] 'Pigeon.Media.AudioRecorder.audioSessionMode' is deprecated; use 'Pigeon.Media.audioSessionMode'");	
     return [NSNumber numberWithUnsignedInt:[[TiMediaAudioSession sharedSession] sessionMode]];
 }
 

@@ -23,7 +23,7 @@
 
 extern BOOL const TI_APPLICATION_ANALYTICS;
 
-@implementation testjeObject
+@implementation PigeonObject
 
 -(id)initWithContext:(KrollContext*)context_ host:(TiHost*)host_ context:(id<TiEvaluator>)pageContext_ baseURL:(NSURL*)baseURL_
 {
@@ -231,7 +231,7 @@ extern BOOL const TI_APPLICATION_ANALYTICS;
 	[self removeProxies];
 	RELEASE_TO_NIL(preload);
 	RELEASE_TO_NIL(context);
-	RELEASE_TO_NIL(_testje);
+	RELEASE_TO_NIL(_pigeon);
 	RELEASE_TO_NIL(modules);
 	RELEASE_TO_NIL(proxyLock);
 	[super dealloc];
@@ -404,7 +404,7 @@ extern BOOL const TI_APPLICATION_ANALYTICS;
 
 -(void)injectPatches
 {
-	// called to inject any testje patches in JS before a context is loaded... nice for 
+	// called to inject any Pigeon patches in JS before a context is loaded... nice for 
 	// setting up backwards compat type APIs
 	
 	NSMutableString *js = [[NSMutableString alloc] init];
@@ -441,7 +441,7 @@ extern BOOL const TI_APPLICATION_ANALYTICS;
 -(void)gc
 {
 	[context gc];
-	[_testje gc];
+	[_pigeon gc];
 }
 
 #pragma mark Delegate
@@ -453,15 +453,15 @@ extern BOOL const TI_APPLICATION_ANALYTICS;
 
 -(void)didStartNewContext:(KrollContext*)kroll
 {
-	// create testje global object
+	// create Pigeon global object
 	NSString *basePath = (url==nil) ? [[NSBundle mainBundle] resourcePath] : [[url path] stringByDeletingLastPathComponent];
-	_testje = [[testjeObject alloc] initWithContext:kroll host:host context:self baseURL:[NSURL fileURLWithPath:basePath]];
+	_pigeon = [[PigeonObject alloc] initWithContext:kroll host:host context:self baseURL:[NSURL fileURLWithPath:basePath]];
 	
 	TiContextRef jsContext = [kroll context];
-	TiValueRef tiRef = [KrollObject toValue:kroll value:_testje];
+	TiValueRef tiRef = [KrollObject toValue:kroll value:_pigeon];
 	
-	NSString *_testjeNS = [NSString stringWithFormat:@"T%sanium","it"];
-	TiStringRef prop = TiStringCreateWithUTF8CString([_testjeNS UTF8String]);
+	NSString *_pigeonNS = [NSString stringWithFormat:@"T%sanium","it"];
+	TiStringRef prop = TiStringCreateWithUTF8CString([_pigeonNS UTF8String]);
 	TiStringRef prop2 = TiStringCreateWithUTF8CString([[NSString stringWithFormat:@"%si","T"] UTF8String]);
 	TiObjectRef globalRef = TiContextGetGlobalObject(jsContext);
 	TiObjectSetProperty(jsContext, globalRef, prop, tiRef, NULL, NULL);
@@ -474,7 +474,7 @@ extern BOOL const TI_APPLICATION_ANALYTICS;
 	{
 		for (NSString *name in preload)
 		{
-			KrollObject *ti = (KrollObject*)[_testje valueForKey:name];
+			KrollObject *ti = (KrollObject*)[_pigeon valueForKey:name];
 			NSDictionary *values = [preload valueForKey:name];
 			for (id key in values)
 			{
@@ -506,7 +506,7 @@ extern BOOL const TI_APPLICATION_ANALYTICS;
 		NSNotification *notification = [NSNotification notificationWithName:kTiContextShutdownNotification object:self];
 		[[NSNotificationCenter defaultCenter] postNotification:notification];
 	}
-	[_testje gc];
+	[_pigeon gc];
 	
 	if (shutdownCondition)
 	{
@@ -520,7 +520,7 @@ extern BOOL const TI_APPLICATION_ANALYTICS;
 -(void)didStopNewContext:(KrollContext*)kroll
 {
 	[self removeProxies];
-	RELEASE_TO_NIL(_testje);
+	RELEASE_TO_NIL(_pigeon);
 	RELEASE_TO_NIL(context);
 	RELEASE_TO_NIL(preload);
 	RELEASE_TO_NIL(modules);
@@ -658,7 +658,7 @@ extern BOOL const TI_APPLICATION_ANALYTICS;
 		return module;
 	}
 	
-	@throw [NSException exceptionWithName:@"org.testje.kroll" reason:[NSString stringWithFormat:@"Couldn't find module: %@",path] userInfo:nil];
+	@throw [NSException exceptionWithName:@"org.pigeon.kroll" reason:[NSString stringWithFormat:@"Couldn't find module: %@",path] userInfo:nil];
 }
 
 @end
