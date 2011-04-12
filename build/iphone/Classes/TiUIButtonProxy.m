@@ -60,10 +60,10 @@
 {
 	switch(styleCache)
 	{
-		case UIPigeonNativeItemInfoLight:
-		case UIPigeonNativeItemInfoDark:
+		case UIpigeonNativeItemInfoLight:
+		case UIpigeonNativeItemInfoDark:
 			return 18;
-		case UIPigeonNativeItemDisclosure:
+		case UIpigeonNativeItemDisclosure:
 			return 29;
 	}
 	return suggestedWidth;
@@ -73,10 +73,10 @@
 {
 	switch(styleCache)
 	{
-		case UIPigeonNativeItemInfoLight:
-		case UIPigeonNativeItemInfoDark:
+		case UIpigeonNativeItemInfoLight:
+		case UIpigeonNativeItemInfoDark:
 			return 19;
-		case UIPigeonNativeItemDisclosure:
+		case UIpigeonNativeItemDisclosure:
 			return 31;
 	}
 	return suggestedHeight;
@@ -87,9 +87,9 @@
 {
 	switch (styleCache)
 	{
-		case UIPigeonNativeItemInfoLight:
-		case UIPigeonNativeItemInfoDark:
-		case UIPigeonNativeItemDisclosure:
+		case UIpigeonNativeItemInfoLight:
+		case UIpigeonNativeItemInfoDark:
+		case UIpigeonNativeItemDisclosure:
 			return suggestedResizing & ~(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 	}
 	return suggestedResizing;

@@ -13,9 +13,9 @@
 		2412F467115C296300454E5B /* TiMediaVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2412F465115C296300454E5B /* TiMediaVideoPlayer.m */; };
 		242E8E1D11BA38DD0046A0D0 /* TiDebuggerContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 242E8E1B11BA38DC0046A0D0 /* TiDebuggerContext.mm */; };
 		242E8E3111BA39FD0046A0D0 /* libTiCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 242E8E3011BA39FD0046A0D0 /* libTiCore.a */; };
-		3760B911D8644B45868F17CB /* libti.paint.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17859DDEDCDA463187FB5EFA /* libti.paint.a */; };
+		24B41E01350541478E524AB5 /* libti.paint.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFDB03F19A34DEBA688D0EE /* libti.paint.a */; };
 		242E8E3211BA39FE0046A0D0 /* libTiCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 242E8E3011BA39FD0046A0D0 /* libTiCore.a */; };
-		C1DC0B94EC7149D7A42459D1 /* libti.paint.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17859DDEDCDA463187FB5EFA /* libti.paint.a */; };
+		E3EA2F27DDF644FABB3A4F37 /* libti.paint.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFDB03F19A34DEBA688D0EE /* libti.paint.a */; };
 		242E95CA11BAC8B40046A0D0 /* TiDebugger.mm in Sources */ = {isa = PBXBuildFile; fileRef = 242E95C911BAC8B40046A0D0 /* TiDebugger.mm */; };
 		242E95CB11BAC8B40046A0D0 /* TiDebugger.mm in Sources */ = {isa = PBXBuildFile; fileRef = 242E95C911BAC8B40046A0D0 /* TiDebugger.mm */; };
 		242E967711BAD2F20046A0D0 /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 242E967411BAD2F20046A0D0 /* AsyncSocket.m */; };
@@ -849,7 +849,7 @@
 		DABB37B412E8CB280026A6EA /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 24EB0A57111E1BAE001DC2D1 /* libxml2.dylib */; };
 		DABB37B512E8CB280026A6EA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24597034118FF66300519F79 /* StoreKit.framework */; };
 		DABB37B612E8CB280026A6EA /* libTiCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 242E8E3011BA39FD0046A0D0 /* libTiCore.a */; };
-		FBBCE825039840B897BE45CA /* libti.paint.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17859DDEDCDA463187FB5EFA /* libti.paint.a */; };
+		85F9F356F38040FC904B7571 /* libti.paint.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFDB03F19A34DEBA688D0EE /* libti.paint.a */; };
 		DABB37B712E8CB280026A6EA /* libtiverify.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24D5C75811E6364F00F097E2 /* libtiverify.a */; };
 		DABDEB07128B5A8F00C85FEA /* AudioStreamerBC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9FF580128A1F3600457759 /* AudioStreamerBC.m */; };
 		DABDEB08128B5A8F00C85FEA /* AudioStreamerCUR.m in Sources */ = {isa = PBXBuildFile; fileRef = DA9FF582128A1F3600457759 /* AudioStreamerCUR.m */; };
@@ -857,7 +857,7 @@
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D6058910D05DD3D006BFB54 /* Pigeon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pigeon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* pigeon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pigeon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2412F464115C296300454E5B /* TiMediaVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiMediaVideoPlayer.h; sourceTree = "<group>"; };
 		2412F465115C296300454E5B /* TiMediaVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiMediaVideoPlayer.m; sourceTree = "<group>"; };
@@ -866,7 +866,7 @@
 		242E8E1B11BA38DC0046A0D0 /* TiDebuggerContext.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TiDebuggerContext.mm; path = Classes/TiDebuggerContext.mm; sourceTree = "<group>"; };
 		242E8E1C11BA38DC0046A0D0 /* TiDebuggerContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiDebuggerContext.h; path = Classes/TiDebuggerContext.h; sourceTree = "<group>"; };
 		242E8E3011BA39FD0046A0D0 /* libTiCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTiCore.a; path = lib/libTiCore.a; sourceTree = SOURCE_ROOT; };
-		17859DDEDCDA463187FB5EFA /* libti.paint.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libti.paint.a; path = "/Library/Application Support/Titanium/modules/iphone/ti.paint/1.0/libti.paint.a"; sourceTree = "<absolute>"; };
+		9FFDB03F19A34DEBA688D0EE /* libti.paint.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libti.paint.a; path = "/Users/kd322/Library/Application Support/Titanium/modules/iphone/ti.paint/1.0/libti.paint.a"; sourceTree = "<absolute>"; };
 		242E95C811BAC8B40046A0D0 /* TiDebugger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiDebugger.h; path = Classes/TiDebugger.h; sourceTree = SOURCE_ROOT; };
 		242E95C911BAC8B40046A0D0 /* TiDebugger.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TiDebugger.mm; path = Classes/TiDebugger.mm; sourceTree = SOURCE_ROOT; };
 		242E967311BAD2F20046A0D0 /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncSocket.h; path = Classes/AsyncSocket.h; sourceTree = SOURCE_ROOT; };
@@ -1264,7 +1264,7 @@
 		24D0700411D0253D00F615D8 /* TiUIiOSProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiUIiOSProxy.h; sourceTree = "<group>"; };
 		24D0700511D0253D00F615D8 /* TiUIiOSProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiUIiOSProxy.m; sourceTree = "<group>"; };
 		24D5C75811E6364F00F097E2 /* libtiverify.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtiverify.a; path = lib/libtiverify.a; sourceTree = SOURCE_ROOT; };
-		24D8E4B1119B9D8A00F8CAA6 /* Pigeon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pigeon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24D8E4B1119B9D8A00F8CAA6 /* pigeon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pigeon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24DD042A116A6C58006FD6E1 /* TiToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiToolbar.h; sourceTree = "<group>"; };
 		24DD042B116A6C58006FD6E1 /* TiToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiToolbar.m; sourceTree = "<group>"; };
 		24DD0455116A6F02006FD6E1 /* TiTabGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiTabGroup.h; sourceTree = "<group>"; };
@@ -1361,7 +1361,7 @@
 		24FBE5AD11293DD1005C8D48 /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CAXException.h; path = Classes/CAXException.h; sourceTree = SOURCE_ROOT; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		32CA4F630368D1EE00C91783 /* Pigeon_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pigeon_Prefix.pch"; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* pigeon_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pigeon_Prefix.pch"; sourceTree = "<group>"; };
 		B421C4101113AA9300DBCB42 /* TiUIScrollableViewProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiUIScrollableViewProxy.h; sourceTree = "<group>"; };
 		B421C4111113AA9300DBCB42 /* TiUIScrollableViewProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiUIScrollableViewProxy.m; sourceTree = "<group>"; };
 		B421C4141113AAA900DBCB42 /* TiUIScrollableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiUIScrollableView.h; sourceTree = "<group>"; };
@@ -1440,7 +1440,7 @@
 		DABA10BE12E676A1007DD791 /* FBLoginDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLoginDialog.m; sourceTree = "<group>"; };
 		DABA10BF12E676A1007DD791 /* FBRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBRequest.h; sourceTree = "<group>"; };
 		DABA10C012E676A1007DD791 /* FBRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBRequest.m; sourceTree = "<group>"; };
-		DABB37BC12E8CB280026A6EA /* Pigeon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pigeon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DABB37BC12E8CB280026A6EA /* pigeon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pigeon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1469,7 +1469,7 @@
 				24EB0A58111E1BAE001DC2D1 /* libxml2.dylib in Frameworks */,
 				24597035118FF66300519F79 /* StoreKit.framework in Frameworks */,
 				242E8E3111BA39FD0046A0D0 /* libTiCore.a in Frameworks */,
-				3760B911D8644B45868F17CB /* libti.paint.a in Frameworks */,
+				24B41E01350541478E524AB5 /* libti.paint.a in Frameworks */,
 				242EA11611BD956F0046A0D0 /* ExternalAccessory.framework in Frameworks */,
 				24D5C75911E6364F00F097E2 /* libtiverify.a in Frameworks */,
 			);
@@ -1500,7 +1500,7 @@
 				24D8E4AB119B9D8A00F8CAA6 /* libxml2.dylib in Frameworks */,
 				24D8E4AC119B9D8A00F8CAA6 /* StoreKit.framework in Frameworks */,
 				242E8E3211BA39FE0046A0D0 /* libTiCore.a in Frameworks */,
-				C1DC0B94EC7149D7A42459D1 /* libti.paint.a in Frameworks */,
+				E3EA2F27DDF644FABB3A4F37 /* libti.paint.a in Frameworks */,
 				24D5C75A11E6364F00F097E2 /* libtiverify.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1530,7 +1530,7 @@
 				DABB37B412E8CB280026A6EA /* libxml2.dylib in Frameworks */,
 				DABB37B512E8CB280026A6EA /* StoreKit.framework in Frameworks */,
 				DABB37B612E8CB280026A6EA /* libTiCore.a in Frameworks */,
-				FBBCE825039840B897BE45CA /* libti.paint.a in Frameworks */,
+				85F9F356F38040FC904B7571 /* libti.paint.a in Frameworks */,
 				DABB37B712E8CB280026A6EA /* libtiverify.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1541,9 +1541,9 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* Pigeon.app */,
-				24D8E4B1119B9D8A00F8CAA6 /* Pigeon.app */,
-				DABB37BC12E8CB280026A6EA /* Pigeon.app */,
+				1D6058910D05DD3D006BFB54 /* pigeon.app */,
+				24D8E4B1119B9D8A00F8CAA6 /* pigeon.app */,
+				DABB37BC12E8CB280026A6EA /* pigeon.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2645,7 +2645,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				32CA4F630368D1EE00C91783 /* Pigeon_Prefix.pch */,
+				32CA4F630368D1EE00C91783 /* pigeon_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 				241EAA21118AB3BB0081A5BE /* defines.h */,
 				241EAEC5118E2BA90081A5BE /* project.xcconfig */,
@@ -2673,7 +2673,7 @@
 			children = (
 				24D5C75811E6364F00F097E2 /* libtiverify.a */,
 				242E8E3011BA39FD0046A0D0 /* libTiCore.a */,
-				17859DDEDCDA463187FB5EFA /* libti.paint.a */,
+				9FFDB03F19A34DEBA688D0EE /* libti.paint.a */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
@@ -2782,9 +2782,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* Pigeon */ = {
+		1D6058900D05DD3D006BFB54 /* pigeon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Pigeon" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "pigeon" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				241EAF36118E30260081A5BE /* Pre-Compile */,
@@ -2796,14 +2796,14 @@
 			);
 			dependencies = (
 			);
-			name = "Pigeon";
-			productName = Pigeon;
-			productReference = 1D6058910D05DD3D006BFB54 /* Pigeon.app */;
+			name = "pigeon";
+			productName = pigeon;
+			productReference = 1D6058910D05DD3D006BFB54 /* pigeon.app */;
 			productType = "com.apple.product-type.application";
 		};
-		24D8E3B5119B9D8A00F8CAA6 /* Pigeon-iPad */ = {
+		24D8E3B5119B9D8A00F8CAA6 /* pigeon-iPad */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24D8E4AE119B9D8A00F8CAA6 /* Build configuration list for PBXNativeTarget "Pigeon-iPad" */;
+			buildConfigurationList = 24D8E4AE119B9D8A00F8CAA6 /* Build configuration list for PBXNativeTarget "pigeon-iPad" */;
 			buildPhases = (
 				24D8E3B6119B9D8A00F8CAA6 /* Resources */,
 				24D8E3B9119B9D8A00F8CAA6 /* Pre-Compile */,
@@ -2815,14 +2815,14 @@
 			);
 			dependencies = (
 			);
-			name = "Pigeon-iPad";
-			productName = Pigeon;
-			productReference = 24D8E4B1119B9D8A00F8CAA6 /* Pigeon.app */;
+			name = "pigeon-iPad";
+			productName = pigeon;
+			productReference = 24D8E4B1119B9D8A00F8CAA6 /* pigeon.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DABB369A12E8CB280026A6EA /* Pigeon-universal */ = {
+		DABB369A12E8CB280026A6EA /* pigeon-universal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DABB37B912E8CB280026A6EA /* Build configuration list for PBXNativeTarget "Pigeon-universal" */;
+			buildConfigurationList = DABB37B912E8CB280026A6EA /* Build configuration list for PBXNativeTarget "pigeon-universal" */;
 			buildPhases = (
 				DABB369B12E8CB280026A6EA /* Resources */,
 				DABB369F12E8CB280026A6EA /* Pre-Compile */,
@@ -2834,9 +2834,9 @@
 			);
 			dependencies = (
 			);
-			name = "Pigeon-universal";
-			productName = Pigeon;
-			productReference = DABB37BC12E8CB280026A6EA /* Pigeon.app */;
+			name = "pigeon-universal";
+			productName = pigeon;
+			productReference = DABB37BC12E8CB280026A6EA /* pigeon.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -2844,7 +2844,7 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Pigeon" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "pigeon" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
@@ -2858,9 +2858,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* Pigeon */,
-				24D8E3B5119B9D8A00F8CAA6 /* Pigeon-iPad */,
-				DABB369A12E8CB280026A6EA /* Pigeon-universal */,
+				1D6058900D05DD3D006BFB54 /* pigeon */,
+				24D8E3B5119B9D8A00F8CAA6 /* pigeon-iPad */,
+				DABB369A12E8CB280026A6EA /* pigeon-universal */,
 			);
 		};
 /* End PBXProject section */
@@ -2910,7 +2910,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"/Library/Application Support/Titanium/mobilesdk/osx/1.6.1/iphone/builder.py\" xcode\nexit $?";
+			shellScript = "\"/Users/kd322/Library/Application Support/Titanium/mobilesdk/osx/1.6.1/iphone/builder.py\" xcode\nexit $?";
                 };
 		24CA8D03111169070084E2DE /* Post-Compile */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2938,7 +2938,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"/Library/Application Support/Titanium/mobilesdk/osx/1.6.1/iphone/builder.py\" xcode\nexit $?";
+			shellScript = "\"/Users/kd322/Library/Application Support/Titanium/mobilesdk/osx/1.6.1/iphone/builder.py\" xcode\nexit $?";
                 };
 		24D8E4AD119B9D8A00F8CAA6 /* Post-Compile */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2966,7 +2966,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"/Library/Application Support/Titanium/mobilesdk/osx/1.6.1/iphone/builder.py\" xcode\nexit $?";
+			shellScript = "\"/Users/kd322/Library/Application Support/Titanium/mobilesdk/osx/1.6.1/iphone/builder.py\" xcode\nexit $?";
                 };
 		DABB37B812E8CB280026A6EA /* Post-Compile */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -3787,12 +3787,12 @@
 				GCC_ENABLE_CPP_RTTI = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Pigeon_Prefix.pch";
+				GCC_PREFIX_HEADER = "pigeon_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
-                                        "\"/Library/Application Support/Titanium/modules/iphone/ti.paint/1.0\"",
+                                        "\"/Users/kd322/Library/Application Support/Titanium/modules/iphone/ti.paint/1.0\"",
 					"\"$(SRCROOT)/../../../../tmp/debug/build\"",
 					"\"$(SRCROOT)/../../../../tmp/staticlib/build/Debug-iphonesimulator\"",
 					"\"$(SRCROOT)/../../../tijs/TiCore/TiCore/build/Release-iphonesimulator\"",
@@ -3811,7 +3811,7 @@
 					"-weak_framework",
 					iAd,
 				);
-				PRODUCT_NAME = "Pigeon";
+				PRODUCT_NAME = "pigeon";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -3823,12 +3823,12 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Pigeon_Prefix.pch";
+				GCC_PREFIX_HEADER = "pigeon_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
-                                        "\"/Library/Application Support/Titanium/modules/iphone/ti.paint/1.0\"",
+                                        "\"/Users/kd322/Library/Application Support/Titanium/modules/iphone/ti.paint/1.0\"",
 					"\"$(SRCROOT)/../../../../tmp/debug/build\"",
 					"\"$(SRCROOT)/../../../../tmp/staticlib/build/Debug-iphonesimulator\"",
 					"\"$(SRCROOT)/../../../tijs/TiCore/TiCore/build/Release-iphonesimulator\"",
@@ -3842,7 +3842,7 @@
 					"-weak_framework",
 					CoreVideo,
 				);
-				PRODUCT_NAME = "Pigeon";
+				PRODUCT_NAME = "pigeon";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -3858,13 +3858,13 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Pigeon_Prefix.pch";
+				GCC_PREFIX_HEADER = "pigeon_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
-                                        "\"/Library/Application Support/Titanium/modules/iphone/ti.paint/1.0\"",
+                                        "\"/Users/kd322/Library/Application Support/Titanium/modules/iphone/ti.paint/1.0\"",
 					"\"$(SRCROOT)/../../../../tmp/staticlib/build/Debug-iphonesimulator\"",
 					"\"$(SRCROOT)/../../../tijs/TiCore/TiCore/build/Release-iphonesimulator\"",
 				);
@@ -3882,7 +3882,7 @@
 					"-weak_framework",
 					CoreVideo,
 				);
-				PRODUCT_NAME = "Pigeon";
+				PRODUCT_NAME = "pigeon";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "armv6 armv7 i386";
 			};
@@ -3896,13 +3896,13 @@
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Pigeon_Prefix.pch";
+				GCC_PREFIX_HEADER = "pigeon_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
-                                        "\"/Library/Application Support/Titanium/modules/iphone/ti.paint/1.0\"",
+                                        "\"/Users/kd322/Library/Application Support/Titanium/modules/iphone/ti.paint/1.0\"",
 					"\"$(SRCROOT)/../../../../tmp/staticlib/build/Debug-iphonesimulator\"",
 					"\"$(SRCROOT)/../../../tijs/TiCore/TiCore/build/Release-iphonesimulator\"",
 				);
@@ -3919,7 +3919,7 @@
 					"-weak_framework",
 					CoreVideo,
 				);
-				PRODUCT_NAME = "Pigeon";
+				PRODUCT_NAME = "pigeon";
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv6 armv7 i386";
@@ -4009,13 +4009,13 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Pigeon_Prefix.pch";
+				GCC_PREFIX_HEADER = "pigeon_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
-                                        "\"/Library/Application Support/Titanium/modules/iphone/ti.paint/1.0\"",
+                                        "\"/Users/kd322/Library/Application Support/Titanium/modules/iphone/ti.paint/1.0\"",
 					"\"$(SRCROOT)/../../../../tmp/staticlib/build/Debug-iphonesimulator\"",
 					"\"$(SRCROOT)/../../../tijs/TiCore/TiCore/build/Release-iphonesimulator\"",
 				);
@@ -4033,7 +4033,7 @@
 					"-weak_framework",
 					CoreMedia,
 				);
-				PRODUCT_NAME = "Pigeon";
+				PRODUCT_NAME = "pigeon";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv6 armv7 i386";
 			};
@@ -4047,13 +4047,13 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Pigeon_Prefix.pch";
+				GCC_PREFIX_HEADER = "pigeon_Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.1.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/lib\"",
-                                        "\"/Library/Application Support/Titanium/modules/iphone/ti.paint/1.0\"",
+                                        "\"/Users/kd322/Library/Application Support/Titanium/modules/iphone/ti.paint/1.0\"",
 					"\"$(SRCROOT)/../../../../tmp/staticlib/build/Debug-iphonesimulator\"",
 					"\"$(SRCROOT)/../../../tijs/TiCore/TiCore/build/Release-iphonesimulator\"",
 				);
@@ -4070,7 +4070,7 @@
 					"-weak_framework",
 					CoreMedia,
 				);
-				PRODUCT_NAME = "Pigeon";
+				PRODUCT_NAME = "pigeon";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "armv6 armv7 i386";
@@ -4080,7 +4080,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Pigeon" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "pigeon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
@@ -4089,7 +4089,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24D8E4AE119B9D8A00F8CAA6 /* Build configuration list for PBXNativeTarget "Pigeon-iPad" */ = {
+		24D8E4AE119B9D8A00F8CAA6 /* Build configuration list for PBXNativeTarget "pigeon-iPad" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				24D8E4AF119B9D8A00F8CAA6 /* Debug */,
@@ -4098,7 +4098,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Pigeon" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "pigeon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
@@ -4107,7 +4107,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DABB37B912E8CB280026A6EA /* Build configuration list for PBXNativeTarget "Pigeon-universal" */ = {
+		DABB37B912E8CB280026A6EA /* Build configuration list for PBXNativeTarget "pigeon-universal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DABB37BA12E8CB280026A6EA /* Debug */,

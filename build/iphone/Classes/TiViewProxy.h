@@ -12,7 +12,7 @@
 
 @protocol TiKeyboardFocusableView
 
-#pragma mark Public Pigeon APIs.
+#pragma mark Public pigeon APIs.
 - (void)focus:(id)args;
 - (void)blur:(id)args;
 

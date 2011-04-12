@@ -10,24 +10,15 @@ var textView = Ti.UI.createView({
 });
 
 
-var ta1 = Titanium.UI.createTextArea({
-    value: 'I am a textarea',
-    height: 300,
-    width: '100%',
-    top: 60,
-    font: {
-        fontSize: 20,
-        fontFamily: 'Marker Felt',
-        fontWeight: 'bold'
-    },
-    color: '#888',
-    textAlign: 'left',
-    appearance: Titanium.UI.KEYBOARD_APPEARANCE_ALERT,
-    keyboardType: Titanium.UI.KEYBOARD_NUMBERS_PUNCTUATION,
-    returnKeyType: Titanium.UI.RETURNKEY_EMERGENCY_CALL,
-    borderWidth: 2,
-    borderColor: '#bbb',
-    borderRadius: 5,
-	
-});
-textView.add(ta1);
+var f = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, 'note.txt');
+Ti.API.info('file = ' + f.name);
+var contents = f.read();
+Ti.API.info('file = ' + f);
+var contentText = contents.text;
+Ti.API.info('Content Text is: ' + contentText);
+var len = contentText.length;
+Ti.API.info('Content Text length is: ' + len);
+ 
+for (var i=0; i<len; i++){
+    Ti.API.info('Char ' + i + ' : ' + contentText.charAt(i));
+}

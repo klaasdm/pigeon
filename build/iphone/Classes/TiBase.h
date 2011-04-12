@@ -48,7 +48,7 @@
 	#define KMETHOD_DEBUG MEMORY_DEBUG
 #endif
 
-// in simulator we redefine to format for Pigeon Developer console
+// in simulator we redefine to format for pigeon Developer console
 
 
 #define TI_INLINE static __inline__
@@ -286,28 +286,28 @@ return map;\
 
  //MUST BE NEGATIVE, as it inhabits the same space as UIBarButtonSystemItem
 enum {
-	UIPigeonNativeItemNone = -1, 
-	UIPigeonNativeItemSpinner = -2,
-	UIPigeonNativeItemProgressBar = -3,
+	UIpigeonNativeItemNone = -1, 
+	UIpigeonNativeItemSpinner = -2,
+	UIpigeonNativeItemProgressBar = -3,
 	
-	UIPigeonNativeItemSlider = -4,
-	UIPigeonNativeItemSwitch = -5,
-	UIPigeonNativeItemMultiButton = -6,
-	UIPigeonNativeItemSegmented = -7,
+	UIpigeonNativeItemSlider = -4,
+	UIpigeonNativeItemSwitch = -5,
+	UIpigeonNativeItemMultiButton = -6,
+	UIpigeonNativeItemSegmented = -7,
 	
-	UIPigeonNativeItemTextView = -8,
-	UIPigeonNativeItemTextField = -9,
-	UIPigeonNativeItemSearchBar = -10,
+	UIpigeonNativeItemTextView = -8,
+	UIpigeonNativeItemTextField = -9,
+	UIpigeonNativeItemSearchBar = -10,
 	
-	UIPigeonNativeItemPicker = -11,
-	UIPigeonNativeItemDatePicker = -12,
+	UIpigeonNativeItemPicker = -11,
+	UIpigeonNativeItemDatePicker = -12,
 	
-	UIPigeonNativeItemInfoLight = -13,
-	UIPigeonNativeItemInfoDark = -14,
+	UIpigeonNativeItemInfoLight = -13,
+	UIpigeonNativeItemInfoDark = -14,
 	
-	UIPigeonNativeItemDisclosure = -15,
+	UIpigeonNativeItemDisclosure = -15,
 	
-	UIPigeonNativeItemContactAdd = -16
+	UIpigeonNativeItemContactAdd = -16
 };
 
 

@@ -23,7 +23,7 @@
 
 extern BOOL const TI_APPLICATION_ANALYTICS;
 
-@implementation PigeonObject
+@implementation pigeonObject
 
 -(id)initWithContext:(KrollContext*)context_ host:(TiHost*)host_ context:(id<TiEvaluator>)pageContext_ baseURL:(NSURL*)baseURL_
 {
@@ -404,7 +404,7 @@ extern BOOL const TI_APPLICATION_ANALYTICS;
 
 -(void)injectPatches
 {
-	// called to inject any Pigeon patches in JS before a context is loaded... nice for 
+	// called to inject any pigeon patches in JS before a context is loaded... nice for 
 	// setting up backwards compat type APIs
 	
 	NSMutableString *js = [[NSMutableString alloc] init];
@@ -453,9 +453,9 @@ extern BOOL const TI_APPLICATION_ANALYTICS;
 
 -(void)didStartNewContext:(KrollContext*)kroll
 {
-	// create Pigeon global object
+	// create pigeon global object
 	NSString *basePath = (url==nil) ? [[NSBundle mainBundle] resourcePath] : [[url path] stringByDeletingLastPathComponent];
-	_pigeon = [[PigeonObject alloc] initWithContext:kroll host:host context:self baseURL:[NSURL fileURLWithPath:basePath]];
+	_pigeon = [[pigeonObject alloc] initWithContext:kroll host:host context:self baseURL:[NSURL fileURLWithPath:basePath]];
 	
 	TiContextRef jsContext = [kroll context];
 	TiValueRef tiRef = [KrollObject toValue:kroll value:_pigeon];

@@ -342,13 +342,13 @@
         NSLog(@"[WARN] Invalid mode for audio player... setting to default.");
         newMode = kAudioSessionCategory_SoloAmbientSound;
     }
-	NSLog(@"[WARN] 'Pigeon.Media.Sound.audioSessionMode' is deprecated; use 'Pigeon.Media.audioSessionMode'");
+	NSLog(@"[WARN] 'pigeon.Media.Sound.audioSessionMode' is deprecated; use 'pigeon.Media.audioSessionMode'");
 	[[TiMediaAudioSession sharedSession] setSessionMode:newMode];
 }
 
 -(NSNumber*)audioSessionMode
 {
-	NSLog(@"[WARN] 'Pigeon.Media.Sound.audioSessionMode' is deprecated; use 'Pigeon.Media.audioSessionMode'");
+	NSLog(@"[WARN] 'pigeon.Media.Sound.audioSessionMode' is deprecated; use 'pigeon.Media.audioSessionMode'");
     return [NSNumber numberWithUnsignedInteger:[[TiMediaAudioSession sharedSession] sessionMode]];
 }
 

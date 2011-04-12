@@ -5,7 +5,7 @@ var pdfViewOpen = false;
 Ti.include('../windows/detail_view.js');
 Ti.include('../windows/pdf_view.js');
 Ti.include('../windows/note_view.js')
-Ti.include('../windows/image_view.js')
+Ti.include('../windows/text_view.js')
 Ti.App.addEventListener('courseClicked', function(e){
     if (pdfViewOpen) {
         win.remove(pdfView);
@@ -30,6 +30,11 @@ Ti.App.addEventListener('noteView', function(e){
 Ti.App.addEventListener('imageView', function(e){
     pdfView.hide();
     win.add(imageView);
+    
+});
+Ti.App.addEventListener('textView', function(e){
+    pdfView.hide();
+    win.add(textView);
     
 });
 Ti.App.addEventListener('CloseNotes', function(e){

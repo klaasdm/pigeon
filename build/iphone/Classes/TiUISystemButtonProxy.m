@@ -34,12 +34,12 @@ MAKE_SYSTEM_PROP(DONE,UIBarButtonSystemItemDone);
 MAKE_SYSTEM_PROP(FLEXIBLE_SPACE,UIBarButtonSystemItemFlexibleSpace);
 MAKE_SYSTEM_PROP(FIXED_SPACE,UIBarButtonSystemItemFixedSpace);
 
-MAKE_SYSTEM_PROP(ACTIVITY,UIPigeonNativeItemSpinner);
-MAKE_SYSTEM_PROP(SPINNER,UIPigeonNativeItemSpinner);
-MAKE_SYSTEM_PROP(INFO_LIGHT,UIPigeonNativeItemInfoLight);
-MAKE_SYSTEM_PROP(INFO_DARK,UIPigeonNativeItemInfoDark);
-MAKE_SYSTEM_PROP(DISCLOSURE,UIPigeonNativeItemDisclosure);
-MAKE_SYSTEM_PROP(CONTACT_ADD,UIPigeonNativeItemContactAdd);
+MAKE_SYSTEM_PROP(ACTIVITY,UIpigeonNativeItemSpinner);
+MAKE_SYSTEM_PROP(SPINNER,UIpigeonNativeItemSpinner);
+MAKE_SYSTEM_PROP(INFO_LIGHT,UIpigeonNativeItemInfoLight);
+MAKE_SYSTEM_PROP(INFO_DARK,UIpigeonNativeItemInfoDark);
+MAKE_SYSTEM_PROP(DISCLOSURE,UIpigeonNativeItemDisclosure);
+MAKE_SYSTEM_PROP(CONTACT_ADD,UIpigeonNativeItemContactAdd);
 
 
 @end
