@@ -14,33 +14,122 @@ var detailView = Titanium.UI.createScrollView({
     contentHeight: "auto"
 });
 
-var detailHeader = Titanium .UI.createView({
+var detailHeader = Titanium.UI.createView({
 	top: 0,
 	left: 0,
 	right: 0,
-	height: 120,
-	backgroundColor: "#ffee00"
+	height: 120
 });
 
-var detailMap = Titanium .UI.createView({
+var classIcon = Titanium.UI.createImageView({
+	left: 30,
+	top: 25,
+	height: 61,
+	width: 57,
+	image: "../images/class_icon.png"
+});
+
+var classTitle = Ti.UI.createLabel({
+    text: "Course",
+    font: {
+        fontSize: 30,
+        fontWeight: 'bold'
+    },
+    color: '#1f8dcd',
+	textAlign: 'left',
+	height: 35,
+	width: 500,
+	top: 30,
+	left: 115
+});
+
+var classHour = Ti.UI.createLabel({
+	text: "10:00 - 11:00",
+	font: {
+		fontSize: 14,
+		fontWeight: 'regular'
+	},
+	color: '#21282c',
+	height: 16,
+	width: 200,
+	left: 115,
+	top: 70
+});
+
+var headerDivider = Ti.UI.createImageView({
+	image: "../images/divider.png",
+	widht: 768,
+	height: 2,
+	left: 0,
+	bottom: 0
+})
+
+detailHeader.add(classIcon, classTitle, classHour, headerDivider);
+
+var detailMap = Titanium.UI.createView({
 	top:120,
 	left: 0,
 	right: 0,
-	height: 280,
-	backgroundColor: "#ff0000"
+	height: 280
 });
 
-var detailLecturer = Titanium .UI.createView({
+var annotation = Titanium.Map.createAnnotation({
+    latitude: 52.2015992,
+    longitude: 0.1164893,
+    title: "CARET",
+    subtitle: 'Centre for Applied Research in Educational Technologies',
+    animate: true,
+	image: "../images/pin.png"
+});
+
+var cambridge = {
+    latitude: 52.2015992,
+    longitude: 0.1164893,
+    latitudeDelta: 0.010,
+    longitudeDelta: 0.018
+};
+
+var smallMap = Titanium.Map.createView({
+    mapType: Titanium.Map.STANDARD_TYPE,
+    region: cambridge,
+    animate: true,
+    regionFit: true,
+    userLocation: false,
+	touchEnabled: false,
+	height: "100%",
+	width: "100%",
+    annotations: [annotation]
+});
+
+detailMap.add(smallMap);
+
+var detailLecturer = Titanium.UI.createView({
 	top: 400,
 	left: 0,
 	right: 0,
-	height: 70,
-	backgroundColor: "#ff0000"
+	height: 110
 });
 
+var lecturerDivider1 = Ti.UI.createImageView({
+	image: "../images/divider.png",
+	widht: 768,
+	height: 2,
+	left: 0,
+	top: 0
+})
+
+var lecturerDivider2 = Ti.UI.createImageView({
+	image: "../images/divider.png",
+	widht: 768,
+	height: 2,
+	left: 0,
+	bottom: 0
+})
+
+detailLecturer.add(lecturerDivider1, lecturerDivider2)
 
 var tableview = Titanium.UI.createTableView({
-    top: 470,
+    top: 510,
     width: "100%",
 	height: 600,
     backgroundColor: '#f7f8f8',
