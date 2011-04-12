@@ -5,7 +5,7 @@ var startingOrientation = "images/left_background.png";
 // WINDOWS
 SplitViewNav.masterWindow = Ti.UI.createWindow({title:'Calendar',backgroundColor:'transparent', barColor:'#2d363f', url:'windows/left_view.js'});
 
-SplitViewNav.detailWindow = Ti.UI.createWindow({title:'Course',backgroundColor:'#313b43', barColor:'#2d363f', url:'windows/right_view.js'});
+SplitViewNav.detailWindow = Ti.UI.createWindow({title:'Course',backgroundColor:'#f9f9f9', barColor:'#2d363f', url:'windows/right_view.js'});
 
 if(Titanium.UI.orientation == Titanium.UI.PORTRAIT || Titanium.UI.orientation == Titanium.UI.UPSIDE_PORTRAIT){
       startingOrientation = "images/left_background.png";
@@ -48,11 +48,13 @@ SplitViewNav.splitView.addEventListener('visible', function(e) {
 		SplitViewNav.detailWindow.leftNavButton = e.button;
 		Ti.API.log('Set button');
         SplitViewNav.masterNav.backgroundImage = 'images/left_background.png';
+		Ti.App.fireEvent('rotate',{orientation: 'portrait'});
 	}
 	else if (e.view == 'master'){
 		SplitViewNav.detailWindow.leftNavButton = null;
 		Ti.API.log('Removed button');
         SplitViewNav.masterNav.backgroundImage = 'images/left_background_short.png';
+		Ti.App.fireEvent('rotate',{orientation: 'landscape'});
 	};
 });
 

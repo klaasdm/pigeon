@@ -9,12 +9,38 @@ var da = new DALists();
 var detailView = Titanium.UI.createScrollView({
     top: 0,
     left: 0,
-    contentWidth: "auto",
+	backgroundColor: 'transparent',
+    contentWidth: "100%",
     contentHeight: "auto"
 });
 
+var detailHeader = Titanium .UI.createView({
+	top: 0,
+	left: 0,
+	right: 0,
+	height: 120,
+	backgroundColor: "#ffee00"
+});
+
+var detailMap = Titanium .UI.createView({
+	top:120,
+	left: 0,
+	right: 0,
+	height: 280,
+	backgroundColor: "#ff0000"
+});
+
+var detailLecturer = Titanium .UI.createView({
+	top: 400,
+	left: 0,
+	right: 0,
+	height: 70,
+	backgroundColor: "#ff0000"
+});
+
+
 var tableview = Titanium.UI.createTableView({
-    top: 390,
+    top: 470,
     width: "100%",
 	height: 600,
     backgroundColor: '#f7f8f8',
@@ -108,12 +134,14 @@ tableview.addEventListener('click', function(e){
     
 });
 
-detailView.add(tableview);
+detailView.add(detailHeader,detailMap, detailLecturer, tableview);
 
 Ti.App.addEventListener('courseClicked', function(data){
 
     rowData = [];
     lists = da.getPdfLists(data.courseId);
+	
+	var tableHeight= 70;
     
     for (var i = 0; i < lists.length; i++) {
     
@@ -121,25 +149,13 @@ Ti.App.addEventListener('courseClicked', function(data){
         
         var listRow = Titanium.UI.createTableViewRow({
             title: Pdf.getName(),
-            height: 80,
+            height: 55,
             listBool: Pdf.getBool(),
             listId: Pdf.getS_id(),
-            color: '#fff',
+            color: '#21282c',
             borderColor: '#000',
-        
-        });
-        //List title
-        var title = Ti.UI.createLabel({
-            color: '#323639',
-            font: {
-                fontSize: 20,
-                fontWeight: 'bold'
-            },
-            top: 13,
-            left: 10,
-            height: 20,
-            width: 300,
-            text: Pdf.getName()
+			backgroundColor: "#fff",
+			selectedBackgroundColor: "#1f8dcd"
         
         });
         
@@ -149,20 +165,23 @@ Ti.App.addEventListener('courseClicked', function(data){
                 fontSize: 14,
                 fontWeight: 'light'
             },
-            top: 40,
-            left: 30,
+			textAlign: 'right',
+            top: 13,
+            right: 30,
             width: 100,
             height: 14,
             text: Pdf.getBool()
         
         });
+		
+		tableHeight += 55;
         
-        
-        listRow.add(title, bool);
+        listRow.add(bool);
         rowData.push(listRow);
         
     };
 	
+	tableview.height = tableHeight;
 	tableview.setData(rowData);
     detailView.contentHeight = 'auto';
 	

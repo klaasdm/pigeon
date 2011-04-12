@@ -263,3 +263,8 @@ Ti.App.addEventListener('noteView', function(e){
     }
 });
 
+Ti.App.addEventListener('rotate', function(e) 
+{
+     tableview.width = '100%';
+});
+
