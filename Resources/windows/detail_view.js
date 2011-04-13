@@ -11,7 +11,7 @@ var detailView = Titanium.UI.createScrollView({
     left: 0,
 	backgroundColor: 'transparent',
     contentWidth: "100%",
-    contentHeight: "auto"
+    contentHeight: "auto",
 });
 
 var detailHeader = Titanium.UI.createView({
@@ -51,14 +51,14 @@ var classHour = Ti.UI.createLabel({
 	},
 	color: '#21282c',
 	height: 16,
-	width: 300,
+	width: 200,
 	left: 115,
 	top: 70
 });
 
 var headerDivider = Ti.UI.createImageView({
 	image: "../images/divider.png",
-	widht: 768,
+	width: 768,
 	height: 2,
 	left: 0,
 	bottom: 0
@@ -107,12 +107,56 @@ var detailLecturer = Titanium.UI.createView({
 	top: 400,
 	left: 0,
 	right: 0,
-	height: 110
+	height: 120
+});
+
+var profilePicture = Titanium.UI.createImageView({
+	image: "../images/empty_avatar.png",
+	height: 55,
+	width: 55,
+	top: 30,
+	left: 30
+});
+
+var lecturerTitle = Ti.UI.createLabel({
+	text: "professor",
+	font: {
+		fontSize: 14,
+		fontWeight: 'regular'
+	},
+	color: '#21282c',
+	height: 16,
+	width: 200,
+	left: 115,
+	top: 30
+});
+
+var lecturerName = Ti.UI.createLabel({
+    text: "Thomas Heylen XV",
+    font: {
+        fontSize: 24,
+        fontWeight: 'bold'
+    },
+    color: '#21282c',
+	textAlign: 'left',
+	height: 30,
+	width: 500,
+	top: 50,
+	left: 115
+});
+
+var emailButton = Ti.UI.createButton({
+	backgroundImage: "../images/email_button.png",
+	backgroundSelectedImage: "../images/email_button_hover.png",
+	width: 151,
+	height: 45,
+	top: 37,
+	right: 30
 });
 
 var lecturerDivider1 = Ti.UI.createImageView({
 	image: "../images/divider.png",
-	widht: 768,
+	width: 768,
 	height: 2,
 	left: 0,
 	top: 0
@@ -120,16 +164,16 @@ var lecturerDivider1 = Ti.UI.createImageView({
 
 var lecturerDivider2 = Ti.UI.createImageView({
 	image: "../images/divider.png",
-	widht: 768,
+	width: 768,
 	height: 2,
 	left: 0,
 	bottom: 0
 })
 
-detailLecturer.add(lecturerDivider1, lecturerDivider2)
+detailLecturer.add(profilePicture, lecturerTitle, lecturerName, emailButton, lecturerDivider1, lecturerDivider2)
 
 var tableview = Titanium.UI.createTableView({
-    top: 510,
+    top: 520,
     width: "100%",
 	height: 600,
     backgroundColor: '#f7f8f8',
@@ -144,18 +188,16 @@ tableview.addEventListener('click', function(e){
     
         var foldername = e.row.listId;
         var filename = e.row.title;
-        
-        
-        
+		
         var ind = Titanium.UI.createProgressBar({
-            width: 200,
+            width: 150,
             height: 20,
             min: 0,
             max: 1,
-            left: 90,
+            right: 20,
             value: 0,
             style: Titanium.UI.iPhone.ProgressBarStyle.PLAIN,
-            top: 40,
+            top: 15,
             font: {
                 fontSize: 12,
                 fontWeight: 'bold'
@@ -235,6 +277,15 @@ Ti.App.addEventListener('courseClicked', function(data){
     for (var i = 0; i < lists.length; i++) {
     
         var Pdf = lists[i];
+		
+		var downloadImage = "../images/download_false.png";
+		var downloadImageHover = "../images/download_false_hover.png";
+		
+		if((Pdf.getBool()) == "true"){
+			Ti.API.info("HALLLLOW");
+			downloadImage = "../images/download_true.png";
+			downloadImageHover = "../images/download_true_hover.png";
+		};
         
         var listRow = Titanium.UI.createTableViewRow({
             title: Pdf.getName(),
@@ -244,28 +295,14 @@ Ti.App.addEventListener('courseClicked', function(data){
             color: '#21282c',
             borderColor: '#000',
 			backgroundColor: "#fff",
-			selectedBackgroundColor: "#1f8dcd"
-        
+			selectedBackgroundColor: "#1f8dcd",
+        	leftImage: "../images/small_download.png",
+			rightImage: downloadImage
         });
-        
-        var bool = Ti.UI.createLabel({
-            color: '#323639',
-            font: {
-                fontSize: 14,
-                fontWeight: 'light'
-            },
-			textAlign: 'right',
-            top: 13,
-            right: 30,
-            width: 100,
-            height: 14,
-            text: Pdf.getBool()
-        
-        });
+		
 		
 		tableHeight += 55;
         
-        listRow.add(bool);
         rowData.push(listRow);
         
     };

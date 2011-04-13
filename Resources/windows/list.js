@@ -111,21 +111,9 @@ courseTable.addEventListener('click', function(e){
     });*/
 	Ti.App.fireEvent('courseClicked', {courseId:e.row.listId});
 });
-var btnTextnote = Titanium.UI.createButton({
-    title: 'TextNote',
-    height: 35,
-    bottom: 10,
-    left: 100,
-    width: 150
 
-});
-btnTextnote.addEventListener('click', function(){
- Ti.App.fireEvent('textView', {
-         
-            });
-});
 
-coursesView.add(sidebarTitleHeader, courseTable,btnTextnote);
+coursesView.add(sidebarTitleHeader, courseTable);
 
 LoadList(selectedDate);
 Ti.App.addEventListener('datePicked', function(data){
