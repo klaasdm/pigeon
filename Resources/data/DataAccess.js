@@ -126,6 +126,24 @@ function DALists(){
         return result;
     };
     
+    /*
+     * GET DETAILS ABOUT SELECTED COURSE
+    */
+    
+    this.getCourseDetails = function(id){
+        var db = Titanium.Database.open("TimeTableList");
+        var rows = db.execute('SELECT * FROM series WHERE Id = ?;', id);
+        var result = [];
+        while (rows.isValidRow()) {
+            result.push({name: rows.fieldByName('Title')});
+            Ti.API.info(rows.fieldByName('Title'));
+            Ti.API.info(id + "----" + rows.fieldByName('Id'));
+            rows.next();
+        }
+        rows.close();
+        return result;
+    };
+    
     this.getFileAmount = function(id, Type){
         var result = [];
         var db = Titanium.Database.open("TimeTableList");

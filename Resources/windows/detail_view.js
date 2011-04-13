@@ -172,17 +172,44 @@ var lecturerDivider2 = Ti.UI.createImageView({
 
 detailLecturer.add(profilePicture, lecturerTitle, lecturerName, emailButton, lecturerDivider1, lecturerDivider2)
 
+var downloadIcon = Titanium.UI.createImageView({
+    image: "../images/downloads.png",
+    width: 31,
+    height: 39,
+    top: 550,
+    left: 45
+});
+
+var downloadName = Ti.UI.createLabel({
+    text: "Available Documents",
+    font: {
+        fontSize: 18,
+        fontWeight: 'bold'
+    },
+    color: '#1f8dcd',
+	textAlign: 'left',
+	height: 20,
+	width: 500,
+	top: 560,
+	left: 95
+});
+
+
 var tableview = Titanium.UI.createTableView({
-    top: 520,
+    top: 590,
     width: "100%",
-	height: 600,
+	height: 0,
     backgroundColor: '#f7f8f8',
     data: rowData,
 	scrollable:false,
 	style: Titanium.UI.iPhone.TableViewStyle.GROUPED
 });
 
-tableview.addEventListener('click', function(e){
+tableview.addEventListener('click', pdfClicked);
+
+function pdfClicked(e){
+
+tableview.removeEventListener('click', pdfClicked);
 
     if (e.row.listBool == 'false') {
     
@@ -222,6 +249,7 @@ tableview.addEventListener('click', function(e){
                 courseId: e.row.listId
             });
             
+            tableview.addEventListener('click', pdfClicked);
             
         };
         c.ondatastream = function(e){
@@ -263,13 +291,14 @@ tableview.addEventListener('click', function(e){
         
     }
     
-});
+};
 
-detailView.add(detailHeader,detailMap, detailLecturer, tableview);
+detailView.add(detailHeader,detailMap, detailLecturer, downloadIcon, downloadName, tableview);
 
 Ti.App.addEventListener('courseClicked', function(data){
     
     classHour.text = data.courseStart + " - " + data.courseEnd;
+    classTitle.text = (da.getCourseDetails((data.courseId).toString()))[0].name;
     
     rowData = [];
     lists = da.getPdfLists(data.courseId);
