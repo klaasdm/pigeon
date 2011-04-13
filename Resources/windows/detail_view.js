@@ -51,7 +51,7 @@ var classHour = Ti.UI.createLabel({
 	},
 	color: '#21282c',
 	height: 16,
-	width: 200,
+	width: 300,
 	left: 115,
 	top: 70
 });
