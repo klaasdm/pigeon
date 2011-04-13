@@ -30,7 +30,7 @@ var classIcon = Titanium.UI.createImageView({
 });
 
 var classTitle = Ti.UI.createLabel({
-    text: "Course",
+    text: "",
     font: {
         fontSize: 30,
         fontWeight: 'bold'
@@ -44,7 +44,7 @@ var classTitle = Ti.UI.createLabel({
 });
 
 var classHour = Ti.UI.createLabel({
-	text: "10:00 - 11:00",
+	text: "00:00 - 00:00",
 	font: {
 		fontSize: 14,
 		fontWeight: 'regular'
@@ -268,7 +268,9 @@ tableview.addEventListener('click', function(e){
 detailView.add(detailHeader,detailMap, detailLecturer, tableview);
 
 Ti.App.addEventListener('courseClicked', function(data){
-
+    
+    classHour.text = data.courseStart + " - " + data.courseEnd;
+    
     rowData = [];
     lists = da.getPdfLists(data.courseId);
 	
@@ -279,12 +281,9 @@ Ti.App.addEventListener('courseClicked', function(data){
         var Pdf = lists[i];
 		
 		var downloadImage = "../images/download_false.png";
-		var downloadImageHover = "../images/download_false_hover.png";
 		
 		if((Pdf.getBool()) == "true"){
-			Ti.API.info("HALLLLOW");
 			downloadImage = "../images/download_true.png";
-			downloadImageHover = "../images/download_true_hover.png";
 		};
         
         var listRow = Titanium.UI.createTableViewRow({

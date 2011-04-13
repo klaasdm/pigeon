@@ -10,6 +10,9 @@ var setDate = new Date();
 var rowData = [];
 var selectedDate;
 var today = true;
+
+var firstTime = window.data.firstTime;
+var nowShowed = false;
 var nextVisible = false;
 
 var coursesView = Ti.UI.createView({
@@ -109,7 +112,7 @@ courseTable.addEventListener('click', function(e){
     /*Ti.App.fireEvent('PdfList', {
         id: e.row.listId
     });*/
-	Ti.App.fireEvent('courseClicked', {courseId:e.row.listId});
+	Ti.App.fireEvent('courseClicked', {courseId: e.row.listId, courseStart: e.row.listStart, courseEnd: e.row.listEnd, courseWhen: e.row.listWhen});
 });
 
 
@@ -144,10 +147,12 @@ function LoadList(day){
             listId: S_days.getS_id(),
             listStart: S_days.getStart(),
             listEnd: S_days.getEnd(),
+            listWhen: "",
             color: '#fff',
             borderColor: '#000',
         
         });
+        
         //List title
         var title = Ti.UI.createLabel({
             color: '#323639',
@@ -189,7 +194,13 @@ function LoadList(day){
             height: 14,
             text: "- " + S_days.getEnd(),
         
-        });        
+        });
+        
+        if(firstTime){
+        if(i == 0){
+            Ti.App.fireEvent('courseClicked', {courseId:listRow.listId, courseStart: listRow.listStart, courseEnd: listRow.listEnd, courseWhen: listRow.listWhen});
+        };
+        };
 		
 		var isStarted = false;
 		var isBusy = false;
@@ -227,6 +238,11 @@ function LoadList(day){
                 image: "../images/now_ribbon.png"
             });
 			listRow.add(nowRibbon);
+            listRow.listWhen = "now";
+            nowShowed = true;
+            if(firstTime){
+            Ti.App.fireEvent('courseClicked', {courseId:listRow.listId, courseStart: listRow.listStart, courseEnd: listRow.listEnd, courseWhen: listRow.listWhen});
+            };
 		};
 		
 		if(isStarted == false && nextVisible == false && today == true){
@@ -238,7 +254,13 @@ function LoadList(day){
                 image: "../images/next_ribbon.png"
             });
 			listRow.add(nextRibbon);
+            listRow.listWhen = "next";
 			nextVisible = true;
+            if(firstTime){
+            if(nowShowed != true){
+                Ti.App.fireEvent('courseClicked', {courseId:listRow.listId, courseStart: listRow.listStart, courseEnd: listRow.listEnd, courseWhen: listRow.listWhen});
+            };
+            };
 		};
         
         listRow.add(title, go, leave);
@@ -246,4 +268,5 @@ function LoadList(day){
 		courseTable.setData(rowData);
     };
 	courseTable.setData(rowData);
+    firstTime = false;
 };

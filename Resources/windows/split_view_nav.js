@@ -3,7 +3,7 @@ SplitViewNav = {};
 var startingOrientation = "images/left_background.png";
 
 // WINDOWS
-SplitViewNav.masterWindow = Ti.UI.createWindow({title:'Calendar',backgroundColor:'transparent', barColor:'#2d363f', url:'windows/left_view.js'});
+SplitViewNav.masterWindow = Ti.UI.createWindow({title:'Calendar',backgroundColor:'transparent', barColor:'#2d363f', url:'windows/left_view.js', data: {firstTime: true}});
 
 SplitViewNav.detailWindow = Ti.UI.createWindow({title:'Course',backgroundColor:'#f9f9f9', barColor:'#2d363f', url:'windows/right_view.js'});
 
@@ -66,7 +66,7 @@ Ti.App.addEventListener('openFolders', function(e)
 
 Ti.App.addEventListener('openTimetable', function(e) 
 {
-     var w = Ti.UI.createWindow({backgroundColor:'transparent', url: 'windows/left_view.js'});
+     var w = Ti.UI.createWindow({backgroundColor:'transparent', url: 'windows/left_view.js', data: {firstTime: false}});
 	SplitViewNav.masterNav.open(w,{animated:false});
 });
 
